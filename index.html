@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aini's Portfolio</title>
+</head>
+<body>
+    <div class="container">
+         <nav>
+            <div class="navbar">
+                <a href="#home" class="navlink">Home</a>
+                <a href="#about" class="navlink">About Me</a>
+                <a href="#project" class="navlink">Project</a>
+                <a href="#contact" class="navlink">Contact</a>
+            </div>
+            <a class="side" onclick="toggleSidebar()">≡</a>
+        </nav>
+        
+        <aside id="sidebar">
+            <a href="#home">home</a>
+            <a href="#about">About Me</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
+        </aside>
+        <div id="overlay" onclick="toggleSidebar()"></div> 
+
+        <div class="home animasi" id="home">
+            <div class="wm">
+                <p>★</p>
+                <p>Nur Aini Dwi Lestari</p>
+                <p>★</p>
+            </div>
+            <div class="port">
+                <p class="port1">PORTFOLIO</p>
+                <p class="port2">PORTFOLIO</p>
+                <p class="port2">PORTFOLIO</p>
+                <p class="port2" style="padding-bottom: 20px;">PORTFOLIO</p>
+                <img src="asset/aini1.jpg" alt="Aini's Photo Profile 1">
+                <p class="star1">★</p>
+                <p class="star2">★</p>
+                <div class="text">Let's Get to<br>Know Me!</div>
+            </div>
+        </div>
+
+        <div class="about animasi" id="about">
+            <div class="al">
+                <div class="polaroid">
+                    <div class="box">
+                        <div class="profile2">
+                            <img src="asset/aini2.png" alt="Aini's Photo Profile 2">
+                            <span class="shadow"></span>
+                            <span class="info1">Nur Aini Dwi Lestari</span>
+                            <span class="info2">Informatika '23</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text2">
+                    <span class="halo">
+                        Hi There!👋🏼 <br>I'm <span style="color: #80aad1;">Aini</span>
+                    </span>
+                    <div class="Text">
+                        <span class="desc">
+                            I'm an informatics student who loves exploring the world of technology and design.                        
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project animasi" id="project">
+            <p class="text4">My Recent <span class="text4" style="color: #80aad1;">Project</span></p>
+            <div class="pro">
+                <a class="project1" target="_blank" href="https://github.com/ainylestari/Glowify">
+                    <div class="ob1"></div>
+                    <img src="asset/project2.png" alt="">
+                    <div class="cap">
+                        <button>Beauty Lifestyle App</button>
+                        <span class="judul">Glowify</span>
+                        <span class="tag">Website App || Website Design</span>
+                    </div>
+                </a>
+                <a class="project2" target="_blank" href="">
+                    <div class="ob1"></div>
+                    <img src="asset/project1.png" alt="">
+                    <div class="cap">
+                        <button>Personal Portfolio</button>
+                        <span class="judul">Portfolio</span>
+                        <span class="tag">Website Design || Modern Website</span>
+                    </div>
+                </a>
+                <a class="project3" target="_blank" href="https://www.figma.com/proto/UKlINa6OCH1FgvwrDeCW8o/choose-your-shoes?node-id=72-1270&starting-point-node-id=13%3A22">
+                    <div class="ob1"></div>
+                    <img src="asset/project3.png" alt="">
+                    <div class="cap">
+                        <button>E-Commerce App</button>
+                        <span class="judul">Stepz</span>
+                        <span class="tag">UI/UX Design || Mobile Design</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="contact animasi" id="contact">    
+            <p class="text4"><span class="text4" style="color: #80aad1;">Contact</span> Me</p><br>
+            <form action="mailto:ainilestari206@gmail.com" method="GET">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+                <button type="submit">Send</button><br>
+            </form>
+            <div class="sosmed">
+                <a target="_blank" href="https://wa.me/6283108142410" class="account" uname="+62 8310-8142-410">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="WhatsApp">
+                </a>
+                <a target="_blank" href="https://instagram.com/ainylest_ryz" class="account" uname="@ainylest_ryz">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/600px-Instagram_logo_2022.svg.png" alt="Instagram">
+                </a>
+                <a target="_blank" href="mailto:ainilestari206@gmail.com" class="account" uname="ainilestari206@gmail.com">
+                    <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Gmail">
+                </a>
+                <a target="_blank" href="https://github.com/ainilestari" class="account" uname="ainylestari">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-github-logo-icon-download-in-svg-png-gif-file-formats--social-media-pack-logos-icons-3073768.png?f=webp&w=256" alt="GitHub">
+                </a>
+                <a target="_blank" href="https://linkedin.com/" class="account" uname="Nur Aini Dwi Lestari">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png" alt="LinkedIn">
+                </a>
+            </div>
+            <div class="tool"></div>
+        </div>     
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

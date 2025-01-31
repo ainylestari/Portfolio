@@ -1,0 +1,571 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+*{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    text-decoration: none;
+    color: aliceblue;
+}
+body{
+    background-color: #1d153b;
+    color: aliceblue;
+}
+
+.container{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100%;
+}
+
+.animasi{
+    opacity: 0;
+    transform: scale(0.8);
+    filter: blur(10px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out, filter 1s ease;
+}
+
+.animasi.visible{
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    right: 1%;
+    color:aliceblue;
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+.navlink{
+    padding: 0 20px;
+}
+
+.navbar{
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.side{
+    border: 1px solid aliceblue;
+    padding: 1px 10px;
+    border-radius: 5px;
+    font-size:x-large;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+#sidebar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -260px; 
+    width: 100px;
+    height: 100%; 
+    background-color: rgb(29, 21, 59);
+    color: white;
+    flex-direction: column;
+    transition: right 0.5s ease-in-out;
+    padding: 30px;
+    z-index: 10; 
+}
+
+#sidebar.show{
+    right: 0;
+}
+
+#sidebar a{
+    padding: 10px 0;
+}
+
+#sidebar a:hover{
+    color: rgb(154, 200, 205);
+    font-size: 15px;
+}
+
+.navlink:hover{
+    color: rgb(154, 200, 205);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+    z-index: 5;
+}
+
+#overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.home{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: clamp(2px, 0.6vw, 10px);
+    justify-content: center;
+    cursor: default;
+}
+
+.wm{
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.port{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 8.5vw;
+    margin-right: -60px;
+}
+
+.port1{
+    position: relative;
+    z-index: 10;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgb(29, 21, 59);
+    font-size: clamp(40px, 9vw, 700px);
+    margin: 0 clamp(10px, 20%, 250px);
+    color: rgb(128, 170, 209);
+}
+
+.port2{
+    color: rgb(29, 21, 59);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgb(152, 171, 189);
+    font-size: clamp(40px, 9vw, 700px);
+    margin: 0 clamp(10px, 20%, 250px);
+}
+
+.port2:hover, .port1:hover{
+    color: rgb(128, 170, 209, 0.5);
+    -webkit-text-stroke-color: rgb(29, 21, 59);
+}
+
+.port img{
+    width: 25%;
+    height: auto;
+    position: absolute;
+    top: 16%;
+    left: 15%;
+    filter: grayscale(100%);
+    transition: filter ease 1s;
+}
+
+.port img:hover{
+    filter: grayscale(0%);
+}
+
+.text{
+    position: absolute;
+    bottom: 15%;
+    right: 18%;
+    border-radius: 5px;
+    background-color: #7C3E66;
+    color: white;
+    font-size: clamp(10px, 2vw, 100px);
+    line-height: 1.5;
+    padding: 1% 2%;
+    text-align: center;
+}
+
+.star1{
+    position: absolute;
+    font-size: clamp(20px, 9vw, 400px);
+    bottom: 25%;
+    left: 10%;
+    rotate: 50deg;
+}
+
+.star2{
+    position: absolute;
+    font-size: clamp(20px, 5vw, 400px);
+    top: 65%;
+    left: 38%;
+    rotate: 10deg;
+}
+
+.about{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.al{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    background-color:rgba(240, 248, 255, 0.1);
+    border-radius: 40px;
+    padding-right: 6%;
+    margin-top: 2%;
+}
+
+.text2{
+    padding-left: 10%;
+}
+
+.halo, .halo span, .text4{
+    font-size: clamp(25px, 5vw, 50px);
+    font-weight: 700;
+}
+
+.desc{
+    font-size: clamp(12px, 2vw, 50px);
+    letter-spacing: clamp(2px, 0.1vw, 10px);
+}
+
+.desc a{
+    font-size: clamp(12px, 2vw, 50px);
+    color: #80aad1;
+}
+
+.polaroid{
+    position: relative;
+    overflow: visible;
+    width: 500px;
+    height: 329px;
+    margin: 5% 0% 0% 10%;
+}
+
+.box{
+    position: relative;
+    display: flex;
+    /*width: clamp(100px, 50vw, 800px);
+    height: clamp(100px, 63vw, 250px);*/
+    width: 250px;
+    height: 315px;
+    background: linear-gradient(200deg,
+                                rgba(124, 62, 102, 0.521),
+                                #80aad1);
+    backdrop-filter: blur(20px);
+    overflow: visible;
+    margin-right: 10%;
+}
+
+.profile2{
+    display: flex;
+    align-items: center;
+}
+
+.profile2 img{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    top: -10%;
+    left: 15%;
+    z-index: 10;
+}
+
+.info1{
+    position: absolute;
+    align-self: flex-start;    
+    padding: 5px 10px;
+    margin: 90% 0% 2% -10%;
+    background-color: #7c3e66;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.info2{
+    position: absolute;
+    align-self: flex-end;    
+    padding: 5px 10px;
+    margin-bottom: 5% ;
+    right: -15%;
+    background-color: #243A73;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.project{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    width: 90%;
+    height: 60%;
+    border-radius: 20px;
+}
+
+.project1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    background: #7C3E66;
+    border-radius: 20px;
+}
+
+.project2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    background: #243A73;
+    border-radius: 20px;
+}
+
+.project3{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    background: rgba(198, 205, 233, 0.3);
+    border-radius: 20px;
+}
+
+.project1 img, .project2 img, .project3 img{
+    position: relative;
+    width: 60%;
+    height: auto;
+    padding: 20px;
+    transition: scale ease 1s;
+}
+
+
+
+.project1 img:hover, .project2 img:hover, .project3 img:hover{
+    scale: 1.15;
+}
+
+.cap{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    left: -15%;
+}
+
+.judul{
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 700;
+    color: azure;
+}
+
+.tag{
+    font-size: smaller;
+    color: rgba(255, 255, 255, 0.582);
+}
+
+.ob1{
+    position: absolute;
+    width: 70%;
+    height: 50%;
+    background-color: rgb(255, 255, 255, 0.2);
+    border-radius: 50%;
+    top: 5%;
+}
+
+button{
+    background-color: rgba(255, 255, 255, 0.623);
+    color: black;
+    border-radius: 20px;
+    font-size: x-small;
+    border: none;
+}
+
+.contact{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 93%;
+    background-color: rgb(29, 21, 59);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+form button {
+    background-color: #6c91b3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #243A73;
+}
+
+.sosmed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #7C3E66;
+    border-radius: 50%;
+    transition: background-color 1s ease;
+}
+
+.account:hover {
+    background-color: #1d153b;
+}
+
+.account img {
+    width: 70%;
+    height: 70%;
+    transition: transform 0.5s ease;
+}
+
+.account img:hover {
+    transform: scale(1.2);
+}
+
+.tooltip{
+    margin-top: 20px;
+    color: aliceblue;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+@media(min-width: 480px){
+    *{
+        font-size: 15px;
+    }
+    .navbar{
+        display: block;
+    }
+    .side{
+        display: none;
+    }
+}
+
+@media(max-width: 480px){
+    *{
+        font-size: 12px;
+    }
+    .navbar{
+        display: none;
+    }
+    .side{
+        display: block;
+    }
+    #sidebar.show{
+        right: 0;
+    }
+    .port2, .port1{
+        margin-right: 20px;
+    }
+    .al{
+        flex-direction: column;
+        height: 80%;
+    }
+    .text2{
+        padding-right: 20px;
+    }
+    .polaroid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0%;
+    }
+    .box{
+        left: 5%;
+        width: 200px ;
+        height: 253px;
+    }
+    .pro{
+        flex-direction: column;
+        width: 90%;
+        height: 70%;
+    }
+    .cap{
+        left: -2%;
+    }
+    .project1, .project2, .project3{
+        display: flex;
+        flex-direction:row;
+        width: 90%;
+        height: 90%;
+    }
+    .ob1{
+        width: 55%;
+        height: 55%;
+        top: 15%;
+        right: 42%;
+    }
+}
