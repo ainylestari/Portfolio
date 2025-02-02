@@ -24,18 +24,18 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 const accounts = document.querySelectorAll('.account');
-const tool = document.querySelector('.tool');
+const capt = document.querySelector('.capt');
 
 accounts.forEach(account => {
     account.addEventListener('mouseover', () => {
         const username = account.getAttribute('uname');
-        tool.textContent = username;
-        tool.style.opacity = '1';
-        tool.style.visibility = 'visible';
+        capt.textContent = username;
+        capt.style.opacity = '1';
+        capt.style.visibility = 'visible';
     });
 
     account.addEventListener('mouseout', () => {
-        tool.style.opacity = '0';
-        tool.style.visibility = 'hidden';
+        capt.style.opacity = '0';
+        capt.style.visibility = 'hidden';
     });
 });

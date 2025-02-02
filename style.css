@@ -491,7 +491,7 @@ form button:hover {
     transform: scale(1.2);
 }
 
-.tooltip{
+.capt{
     margin-top: 20px;
     color: aliceblue;
     font-size: 1rem;
